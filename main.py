@@ -8,3 +8,9 @@ def get_chat_id(update):
     chat_id = update["message"]["chat"]["id"]
     return chat_id
 
+#function to get message text
+
+def get_message_text(update):
+    message_text = update["message"]["text"]
+    return message_text
+
