@@ -25,3 +25,11 @@ def last_update(req):
     result = response["result"]
     total_updates = len(result) - 1
     return result(total_updates)
+
+
+# function to let bot send message
+
+def send_message(chat_id, message_text):
+    params = {"chat_id": chat_id, "text": "message_text"}
+    response = requests.post(url + "sendMessage", data=params)
+    return response
